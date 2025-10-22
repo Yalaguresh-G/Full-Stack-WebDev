@@ -2,35 +2,42 @@
 
 <h3 class="my-4">Create New Listing</h3>
 
-<form action="/listings" method="POST">
+<form action="/listings" method="POST" novalidate class="needs-validation">
   <div class="mb-3">
     <label for="title" class="form-label">Title</label>
     <input type="text" class="form-control" id="title" name="title" required>
+    <div class="valid-feedback">Title looks good!</div>
+    <div class="invalid-feedback">Enter valid Title</div>
   </div>
 
   <div class="mb-3">
     <label for="description" class="form-label">Description</label>
-    <textarea class="form-control" id="description" name="description"></textarea>
+    <textarea class="form-control" id="description" name="listing[description] " required></textarea>
+    <div class="invalid-feedback">Enter a short  Description</div>
   </div>
 
   <div class="mb-3">
     <label for="imageUrl" class="form-label">Image URL</label>
     <input type="text" class="form-control" id="imageUrl" name="image[url]" placeholder="Enter image URL">
+    <div class="invalid-feedback">Enter a valid URL</div>
   </div>
 
   <div class="mb-3">
     <label for="price" class="form-label">Price</label>
-    <input type="number" class="form-control" id="price" name="price" placeholder="Enter price">
+    <input  class="form-control" id="price" name="price" placeholder="Enter price" required>
+    <div class="invalid-feedback">Enter valid price </div>
   </div>
 
   <div class="mb-3">
     <label for="location" class="form-label">Location</label>
-    <input type="text" class="form-control" id="location" name="location" placeholder="Enter location">
+    <input type="text" class="form-control" id="location" name="location" placeholder="Enter location" required>
+    <div class="invalid-feedback">Please enter valid Location</div>
   </div>
 
   <div class="mb-3">
     <label for="country" class="form-label">Country</label>
-    <input type="text" class="form-control" id="country" name="country" placeholder="Enter country">
+    <input type="text" class="form-control" id="country" name="country" placeholder="Enter country" required>
+    <div class="invalid-feedback">Please enter valid country name</div>
   </div>
 
   <button type="submit" class="btn btn-primary">Create Listing</button>

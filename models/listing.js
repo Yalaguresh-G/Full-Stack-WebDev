@@ -17,7 +17,7 @@ const ListingSchema = new Schema({
         default: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
         set: (v) =>
             v === ""
-                ? "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+                ? "https://unsplash.com/photos/snowy-mountain-illuminated-by-sunlight-Qn6AAIVkLww"
                 : v
     }
 }
